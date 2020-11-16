@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    #container_name: adopt-a-drain
+    image: wilfongjt/heroku-nuxtjs-app
+    build:
+      context: ./lb-hero-app/
+    command: >
+      bash -c "npm install && npm run dev"
+    volumes:
+      - ./lb-hero-app:/usr/src
+    ports:
+      - "3000:3000"
+    environment:
+      - LB_ENV=${LB_ENV}
