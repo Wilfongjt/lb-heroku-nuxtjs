@@ -1,0 +1,29 @@
+language: node_js
+# job - an automated process that clones your repository into a virtual environment and then carries out a series of phases such as compiling your code, running tests, etc. A job fails, if the return code of the script phase is non-zero.
+# phase - the sequential steps of a job. For example, the install phase, comes before the script phase, which comes before the optional deploy phase.
+node_js:
+  - 10
+
+stage:
+  - dev
+  - prod
+
+branches:
+  only:
+    - stages
+
+jobs:
+  include:
+    - stage: dev
+      name: "test1"
+      script: echo "hello world from dev11"
+
+    - script: echo "hello world from dev22"
+      name: test2
+
+    - stage: prod
+      name: test1
+      script: echo "hello world from prod11"
+
+    - script: echo "hello world from prod22"
+      name: test2
