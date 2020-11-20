@@ -3,14 +3,11 @@ node_js:
 - stable
 - '6'
 - '4'
-before_deploy:
-  - "echo 'ready? 1 git subtree'"
-  - "echo 'ready? 2 git subtree'"
 deploy:
-  provider: heroku
-  api_key:
-    secure: JEJZYcsU5ng8trEm0b767Kj5XgVW3YOQ9Cogb9xfPIo0PUoacjluJMVfzJb5NQuBTLbsAdB3TYLh0cGEFkUJ940Nka4PUP5+M7nPsRtwaE0Zjhj41lyE/rmULVpw7tvO4Plyr4h4By6bS2W0f0SQ/TCEPt6QXVo0yykee+Js1azyW2BFjsf3cgOlh/CP6pJHWegQ33QF3zAHdFf0XJZu5WKbwUwQooadYdzZ0slLdILVnruKOAft5rHOtNXK1tsa9UY+12ppfCGShi23OblT4E0/+vx/qv+Ev3Eo47MW8j2E8vDkjUAEHybFRMvJVQnfyZPmd9LVcPOkJgfFwa6soBHP+MyLek6FMMx/J9s/FZGzbcmD9+Ex3saIT5nKjHttI+PKv1H0TjsDht9t068II0/E+25vcjmIO/JYbMnpP3vFwh+5PEPIkrtHwINQxM4TKAbaxiAFTLQaSsKrUc0b0gN3Zf3mHtl4hhbAn5EgsbK2CY+9BufUOL4aJXBnhWWdCIVrRrBquVhzCx6flmZs3zYDpHB35OrxGFkDH7z6wbar8K2kYpKOLZ8xHsgw4QXovyzatChXqoeKcaySD983ICw6RcFoHSib9fUNnEz+FAqNJ8lpDU+Mm4kNDTvpg++Nzv3X1QyTePs9fZ460mTN2wzim3ebjVbEf8xs8x0XKoQ=
-  app: lb-hero-app
+  provider: script
+  script: bash ./gh_split_deploy.sh $GH_TOKEN
   on:
-    repo: Wilfongjt/lb-heroku-nuxtjs
-  skip_cleanup: 'true'
+    branch: trunk
+env:
+  global:
+    secure: gAqBmzCGNLZ45kyyGn1Qa9aDvH4aZmK30CDxQuRd61rNH0NK5b9wNH1UxShJXoHYl/WX4B+4YoGUrdszao6GC96LQMr60yu4GtU2lUyd1B4K2Qc1Yb0tr/e7H1TJZOqQlmCSNRDXwwb4V53flU4N2MgUFcn8S6EK81xfuyLRFZwqf6Uxg8WgE9nCfziWlJFTxCu+7Yc7l0QR70dqSSquZPaSYZiIztFbKAQde81ghjQRmNGyLCjqoKaMcSCEI0g7b3lf5fG1AvU7cEDZacwnY5+mxMs2M0DnG82o7I6Njli+dF4CEHbqLxT+QSyIYQV5yr8l0xld1m6QUkgUWeSb377W8teH4lxEBoDS3vLQBG7+u/zqRDm6ED5ynBEIfSDeDwsRG9c+vR/XU+chZCvYzwvR64PSQBCh7vIl22Kuc+okFUHg6VY5lV+9djaHP+bdwUBBueC4vDHRCYi4txymHXaxw35kjaqUUYyvPWQbuo8sbp5IN7MtX7N6RIWdSSKmc3tsOTu7rp331PK6SXZLaaFgvJM7TMiMD091UTNHB8MJ+DWxK+eaqaZJPeBU6lg4tJB8OgXzAVfpE2RsZrjXprfSd7/F/gZ5xLrt6UY1cUlwd0oMt++z+Ug82/q61VyFXF/g7Si0Y5b5X/na/lybc56WN4O4auV0y/a9z/Jgm8M=
