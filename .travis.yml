@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+deploy:
+  provider: script
+  script: bash ./gh_split_deploy.sh $GH_TOKEN
+  on:
+    branch: trunk
+env:
+  global:
+    secure: gAqBmzCGNLZ45kyyGn1Qa9aDvH4aZmK30CDxQuRd61rNH0NK5b9wNH1UxShJXoHYl/WX4B+4YoGUrdszao6GC96LQMr60yu4GtU2lUyd1B4K2Qc1Yb0tr/e7H1TJZOqQlmCSNRDXwwb4V53flU4N2MgUFcn8S6EK81xfuyLRFZwqf6Uxg8WgE9nCfziWlJFTxCu+7Yc7l0QR70dqSSquZPaSYZiIztFbKAQde81ghjQRmNGyLCjqoKaMcSCEI0g7b3lf5fG1AvU7cEDZacwnY5+mxMs2M0DnG82o7I6Njli+dF4CEHbqLxT+QSyIYQV5yr8l0xld1m6QUkgUWeSb377W8teH4lxEBoDS3vLQBG7+u/zqRDm6ED5ynBEIfSDeDwsRG9c+vR/XU+chZCvYzwvR64PSQBCh7vIl22Kuc+okFUHg6VY5lV+9djaHP+bdwUBBueC4vDHRCYi4txymHXaxw35kjaqUUYyvPWQbuo8sbp5IN7MtX7N6RIWdSSKmc3tsOTu7rp331PK6SXZLaaFgvJM7TMiMD091UTNHB8MJ+DWxK+eaqaZJPeBU6lg4tJB8OgXzAVfpE2RsZrjXprfSd7/F/gZ5xLrt6UY1cUlwd0oMt++z+Ug82/q61VyFXF/g7Si0Y5b5X/na/lybc56WN4O4auV0y/a9z/Jgm8M=
