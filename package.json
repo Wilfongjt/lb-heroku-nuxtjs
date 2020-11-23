@@ -1,0 +1,20 @@
+{
+  "name": "lb-heroku-nuxtjs",
+  "version": "1.0.0",
+  "description": "Stub for deployment application",
+  "main": "index.js",
+  "scripts": {
+    "publishToHeroku": "git subtree push --prefix lb-hero-app  lb-hero-app-staging master || true",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilfongjt/lb-heroku-nuxtjs.git"
+  },
+  "author": "James Wilfong <wilfongjt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilfongjt/lb-heroku-nuxtjs/issues"
+  },
+  "homepage": "https://github.com/wilfongjt/lb-heroku-nuxtjs#readme"
+}
