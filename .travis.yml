@@ -8,6 +8,6 @@ deploy:
   hk_api_key:
     secure: Oc4C3fzX5GqjZYZeSapxwy8l3OJ9rwBsw5ligfpMcQ7psW0G/9CmtyMJ/ySm1flmHKH8i3r10rbGOhfm8ex7+hVFtOP13I3PU6tZlvUkOSfEjlXEYsdu0VIbt/1tR+PD62OtKCG4VMUN/VYkafR4XEUHmpoErQnQuc7ndCg8O4IYpTQW2L1aeDyYT8oAOxcUZ01nEYrsZEa3ZVHSLlHRCXuuRmtSyqA2BmI34/s0hU8NFlpnC/37osvGREa8r8xMWE5mHYABi/uhQ/JMrmGGn7u6S+QZNjjgjU8l/GvOQKbJD+2lcDqG9+Ai0Dkd1VeFEgdorZY/n5ALE0FdKdKBzsD09+XCReJQvX/bBGptQVp1XZe8hO9PLgHBkfJ5P6tkc1XZRuDGFjL+SxZxqQVq66EL6xxKYGf7dsFTjpyzi5B4J3gd+kd68nasOgH5KgYBP7Zwz0vJWOce+xvJMzCtlD6XLcBL8tQ10tQDiQ37lY8ool6GZlQ+RMxz5FLoXnoghRD8jbE3G9pr68Thm/BqG+sF4K+CR7Wt2O5hXWiArBGYVGpeaSt28VMSKeGqlE6wbl9Ri20Jig18Vkv8hvSEZupVRgMg7/zhgsIVHrSBhBcfLYVgXaJP0x8xxNoYPwm0jXNBdvq7Ka053qlgwNWMXvj096hm4XEujtcW8+5/g4A=
   provider: script
-  script: bash ts_deploy.sh staging
+  script: bash echo "staging"
   on:
     branch: trunk
