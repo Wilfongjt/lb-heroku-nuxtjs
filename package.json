@@ -2,13 +2,12 @@
   "name": "lb-heroku-nuxtjs",
   "version": "1.0.0",
   "description": "Stub for deployment application",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wilfongjt/lb-heroku-nuxtjs.git"
-  },
   "author": "James Wilfong <wilfongjt@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "scripts": {
+    "test": "jshint hello.js"
+  }
 }
